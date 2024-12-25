@@ -1,9 +1,9 @@
-```markdown
 # Medical Records Blockchain System
 
 A secure blockchain-based medical records management system built with Hyperledger Fabric and Python.
 
 ## Table of Contents
+- [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
 - [Directory Structure](#directory-structure)
 - [Installation](#installation)
@@ -12,6 +12,19 @@ A secure blockchain-based medical records management system built with Hyperledg
 - [Running the Application](#running-the-application)
 - [API Documentation](#api-documentation)
 - [Troubleshooting](#troubleshooting)
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/11Hermit/Medical-Records-Chaincode.git
+cd Medical-Records-Chaincode
+```
+
+2. Install requirements:
+```bash
+pip install -r requirements.txt
+```
 
 ## Prerequisites
 
@@ -47,15 +60,20 @@ medical-records-blockchain/
 │           └── go.mod
 ├── network/               # Hyperledger Fabric network files
 ├── scripts/              # Utility scripts
+├── requirements.txt      # Python dependencies
 └── README.md
 ```
 
 ## Installation
 
-1. Clone the repository:
+1. Set up Python environment:
 ```bash
-git clone https://github.com/yourusername/medical-records-blockchain.git
-cd medical-records-blockchain
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+
+# Install required packages
+pip install -r requirements.txt
 ```
 
 2. Set up Go modules for chaincode:
@@ -70,17 +88,7 @@ go mod verify
 cd ../../../
 ```
 
-3. Install Python dependencies:
-```bash
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-
-# Install required packages
-pip install -r requirements.txt
-```
-
-4. Install Hyperledger Fabric binaries and docker images:
+3. Install Hyperledger Fabric binaries and docker images:
 ```bash
 curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.5.0 1.5.5
 ```

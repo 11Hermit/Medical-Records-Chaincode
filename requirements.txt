@@ -1,0 +1,3 @@
+gradio==4.19.2
+fabric-sdk-py==0.9.0
+python-dotenv==1.0.0 
